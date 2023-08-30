@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  font-family: "Courier New", Courier, monospace;
+}
+main {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: lightpink;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-align: left;
+  width: 100%;
+}
+.input-container {
+  border: solid black 2px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+input {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  user-select: none;
+  padding: 0.3rem 0 0.3rem 0.3rem;
+  max-width: 90%;
+}
+input::placeholder {
+  letter-spacing: 0;
+  font-size: 1.5rem;
+}
+input::selection {
+  background-color: rgba(128, 128, 128, 0.687);
+  color: white;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
+i {
+  cursor: pointer;
+  opacity: 0.3;
+  padding: 0.3rem 0.3rem 0.3rem 0;
+}
+button {
+  background-color: black;
+  width: fit-content;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+button:hover {
+  background-color: green;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+.notification {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: -3500px;
+  margin: 1rem;
+  transition: right 0.3s linear;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: lightgreen;
+  font-size: 1.25rem;
+}
+
+@media (width <= 436px) {
+  input {
+    font-size: 1.2rem;
+  }
+}
